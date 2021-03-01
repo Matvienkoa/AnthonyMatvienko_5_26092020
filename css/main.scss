@@ -1,0 +1,274 @@
+/* =================================Polices===============================*/
+
+@font-face {
+    font-family: 'balooregular';
+    src: url('polices/Baloo-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*===================================Body==================================*/ 
+
+.page{
+    height: 100vh;
+}
+
+/* ================================== Header ==============================*/
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logolink{
+    position: absolute;
+    left: 10px;
+}
+
+.fas{
+    color: rgb(80, 83, 83);
+}
+
+/* ================================= Cart Product =======================*/
+
+.cardProduct, .productDetails {
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    img{
+        border-radius: 30px;
+        box-shadow: 0px 2px 3px rgb(169, 194, 194) ;
+        margin-bottom: 15px;
+        height: ;
+    }
+}
+
+/* ==================================== Footer ==========================*/
+
+footer{
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    p {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .iconsfooter{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        i {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+/* ================================ Index =============================== */
+/* ----------------------------------Desc Title------------------------- */
+
+.desc{
+    text-align: center;
+}
+
+h1{
+    font-family: 'balooregular', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-top: 10px;
+    color: rgb(103, 98, 105);
+}
+
+p{
+    font-family: 'balooregular', Arial, Helvetica, sans-serif;
+    color: rgb(103, 98, 105);
+}
+
+/*---------------------------------cardProduct----------------------------*/
+
+
+.linkProduct{
+     text-decoration: none;
+    outline: none;
+    h1, p{
+        color: #9356DC;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ================================ Product ============================ */
+
+#selectColors{
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.productDetails{
+    h1{
+        font-size: 2.7rem;
+        color: #9356DC;
+    }
+    p{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 1.3rem;
+    }
+    button{
+        margin-bottom: 30px;
+    }
+    img{
+        width: 80%;
+    }
+}
+
+/* ================================ Panier ============================= */
+
+table{
+    width: 95%;
+    margin: auto;
+    padding: 0;
+    table-layout: auto;
+    margin-bottom: 30px;
+    caption {
+        caption-side: top;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'balooregular', Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+    }
+    img{
+        width: 190px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 3px rgb(169, 194, 194);
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    tr{
+        border-bottom: 3px solid #ddd;
+    }
+}
+
+h5{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 20px;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        margin-bottom: 10px;
+      }
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #produits{
+        display: flex;
+        align-items: center;
+        i{
+            position: relative;
+            top: 30px;
+            right: 50px;
+        }
+        img{
+            margin-right: 20px;
+            margin-top: 10px;
+            width: 150px;
+        }
+    }
+      
+    table td:last-child {
+        border-bottom: 0;
+    }
+    
+}
+
+#totalCost{
+    text-align: center;
+}
+
+#noproduct p{
+    font-size: 2rem;
+    font-family: 'balooregular', Arial, Helvetica, sans-serif;
+    color: #9356DC;
+    text-align: center;
+}
+
+form{
+    visibility: hidden;
+    width: 90%;
+    margin: auto;
+    
+}
+
+.showformcontact{
+    visibility: visible;
+}
+
+/*----------------------------------form-------------------------*/
+
+form{
+    margin-top: 40px;
+    .btn{
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+
+/*=================Confirmation==================*/
+
+#thx{
+    text-align: center;
+    h1{
+        margin-top: 30px;
+    }
+    p{
+        font-size: 1.3rem;
+        color: #9356DC;
+    }
+    i{
+        color: #23d842;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+

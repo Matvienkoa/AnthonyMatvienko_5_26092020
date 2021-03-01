@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Votre Panier</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/b1cc2409d4.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-light bg-light">
+                <a class="logolink" href="index.html"><img src="images/logo.png" alt="logo orinoco" class="logo"/></a>
+                <a class="navbar-brand" href="#"><i class="fas fa-user"></i></a>
+                <a class="navbar-brand" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </nav>
+        </header>
+
+        <table class="rtable rtable--flip">
+            <caption>Mon Panier</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Produits</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="products-in-cart">
+            </tbody>
+        </table>
+
+        <div id="totalCost"></div>
+
+        <div id="noproduct"></div>
+            
+        <form action="" id="formcontact" class="mb-3">
+            <p>Pour valider votre commande, saisissez vos informations :</p>
+            <label for="firstName" class="form-label">Nom :</label>
+            <input type="text" name="firstName" class="form-control" id="firstname" required>
+            <label for="lastName" class="form-label">Prénom :</label>
+            <input type="text" name="lastName" class="form-control" id="lastname" required>
+            <label for="address" class="form-label">Adresse :</label>
+            <input type="text" name="address" class="form-control" id="address" required>
+            <label for="city" class="form-label">Ville :</label>
+            <input type="text" name="city" class="form-control" id="city" required>
+            <label for="email" class="form-label">E-mail :</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+            <button type="submit" class="btn btn-secondary" id="purchaseOrder">Valider votre Commande</button>
+        </form>
+
+        <footer class="container-fluid bg-light">
+            <div class="iconsfooter"><i class="fab fa-twitter"></i><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i></div>
+            <p>Qui sommes nous?</p>
+            <p>Contact</p>
+            <p>CGV</p>
+        </footer>
+    <script src="panier.js"></script>
+    </body>
+</html>
