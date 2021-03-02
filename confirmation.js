@@ -1,11 +1,11 @@
 // Déclaration Variables
-let cartCost = localStorage.getItem('totalCost');
+let totalCost = localStorage.getItem('totalPrice');
 let totalOrder = document.getElementById('totalOrder');
 let orderNumber = document.getElementById('orderId');
 
 // Affiche prix total de commande
 function showTotalOrder () {
-    totalOrder.innerHTML += ` ${cartCost},00 €` 
+    totalOrder.innerHTML += ` ${totalCost},00 €` 
 };
 
 // Affiche ID Commande retourné par API

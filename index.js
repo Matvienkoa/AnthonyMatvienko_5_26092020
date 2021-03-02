@@ -2,9 +2,10 @@
 const products = document.getElementById("products");
 const getTeddies = fetch('http://localhost:3000/api/teddies');
 
-// Show Teddies -- Création de cartes par produit
-getTeddies.then((res) => res.json())
-        .then((teddies) => {
+// Show Teddies -- Création et affichage de cartes par produit
+getTeddies.catch(() => {alert(error)})
+    .then((res) => res.json())
+    .then((teddies) => {
         for (let i = 0; i < teddies.length; i++) {
             let name = teddies[i].name;
             let price = teddies[i].price / 100;
