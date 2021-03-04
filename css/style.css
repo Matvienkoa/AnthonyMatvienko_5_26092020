@@ -7,7 +7,12 @@
 }
 /*===================================Body==================================*/
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page main {
+  flex-grow: 1;
 }
 
 /* ================================== Header ==============================*/
@@ -123,13 +128,13 @@ p {
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .cardProduct img {
-    height: 233px;
+    height: 260px;
     object-fit: cover;
   }
 }
 @media screen and (min-width: 1201px) {
   .cardProduct img {
-    height: 275px;
+    height: 330px;
     object-fit: cover;
   }
 }
