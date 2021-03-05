@@ -38,7 +38,13 @@
     color: rgb(80, 83, 83);
 }
 
-/* ================================= Cart Product =======================*/
+#cartLogo{
+    &:hover{
+        color: #9356DC;
+    }
+}
+
+/* ================================= Card Product =======================*/
 
 .cardProduct, .productDetails {
     text-align: center;
@@ -50,6 +56,16 @@
         border-radius: 30px;
         box-shadow: 0px 2px 3px rgb(169, 194, 194) ;
         margin-bottom: 15px;
+        animation: apparition-img 1500ms 0ms;
+    }
+}
+
+@keyframes apparition-img{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -70,6 +86,7 @@ footer{
         i {
             padding-left: 10px;
             padding-right: 10px;
+            cursor: pointer;
         }
     }
 }
@@ -104,6 +121,14 @@ p{
     }
     p{
         font-size: 1.2rem;
+    }
+}
+
+.cardProduct img{
+    transition: opacity 500ms, box-shadow 500ms;
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0px 8px 5px #b9b7b7;
     }
 }
 
@@ -155,7 +180,7 @@ p{
     }
 }
 
-/* ================================ Panier ============================= */
+/* ================================ Cart ============================= */
 
 table{
     width: 95%;
@@ -180,6 +205,11 @@ table{
     tr{
         border-bottom: 3px solid #ddd;
     }
+    .fa-trash{
+        &:hover{
+            color: red;
+        }
+    }
 }
 
 h5{
@@ -196,6 +226,15 @@ h5{
     i{
         color: red;
     }
+}
+
+.fa-minus{
+    cursor: pointer;
+    margin-right: 12px;
+} 
+.fa-plus{
+    cursor: pointer;
+    margin-left: 12px;
 }
 
 @media screen and (max-width: 600px) {
@@ -269,6 +308,18 @@ form{
 
 .showformcontact{
     visibility: visible;
+    animation: apparition-form 1500ms 0ms;
+}
+
+@keyframes apparition-form{
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 /*----------------------------------form-------------------------*/
@@ -279,6 +330,7 @@ form{
         display: block;
         margin: auto;
         margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 

@@ -42,7 +42,7 @@ function showTeddy (teddies) {
                 }
 
             //Ajout du produit au panier au clic sur boutton
-            let btn = document.getElementById("btn")  
+            let btn = document.getElementById("btn");
             btn.addEventListener('click', () => {
                 addProduct(teddies[i]);
                 alert("Votre Teddy a bien été ajouté au Panier!");

@@ -18,10 +18,39 @@ function displayCart() {
                 <td scope="row" data-label="Produits" id="produits"><i data-id=${item._id} class="fas btn fa-trash col-1"></i>
                 <img src=${item.imageUrl} alt=""/> ${item.name} </td>
                 <td data-label="Prix"> ${item.price / 100},00 € </td>
-                <td data-label="Quantité"><i data-id=${item._id} class="fas fa-minus"></i>          ${item.quantity}          <i data-id=${item._id} class="fas fa-plus"></i></td>
+                <td data-label="Quantité"><i data-id=${item._id} class="fas fa-minus"></i>${item.quantity}<i data-id=${item._id} class="fas fa-plus"></i></td>
                 <td data-label="Total">${item.quantity * item.price /100},00 €</td>
             </tr>`
         })
+
+        //Gestion quantité
+        //Ajout
+        let btnPlus = document.getElementsByClassName('fa-plus');
+        for (let i=0 ; i < btnPlus.length; i++) {
+            btnPlus[i].addEventListener('click' , () => {
+                Object.values(cartItems).map(teddy => {
+                    if (teddy._id == btnPlus[i].dataset.id) {
+                        teddy.quantity += 1;
+                        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+                        window.location.reload(true);
+                    }
+                })
+            })
+        }
+        //Retrait
+        let btnMinus = document.getElementsByClassName('fa-minus');
+        for (let i=0 ; i < btnMinus.length; i++) {
+            btnMinus[i].addEventListener('click' , () => {
+                Object.values(cartItems).map(teddy => {
+                    if (teddy._id == btnMinus[i].dataset.id) {
+                        teddy.quantity -= 1
+                        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+                        window.location.reload(true);                           
+                    }
+                })
+            })
+        }
+
 
         //Suppression d'un produit du panier (suppression d'un produit du localStorage au click sur boutton)
         let btnDeleteTeddy = document.getElementsByClassName('fa-trash');
