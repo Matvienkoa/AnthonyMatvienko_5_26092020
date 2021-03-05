@@ -42,7 +42,7 @@ function displayCart() {
         for (let i=0 ; i < btnMinus.length; i++) {
             btnMinus[i].addEventListener('click' , () => {
                 Object.values(cartItems).map(teddy => {
-                    if (teddy._id == btnMinus[i].dataset.id) {
+                    if (teddy._id == btnMinus[i].dataset.id && teddy.quantity > 1) {
                         teddy.quantity -= 1
                         localStorage.setItem("productsInCart", JSON.stringify(cartItems));
                         window.location.reload(true);                           
