@@ -114,8 +114,8 @@ document.getElementById("formcontact").addEventListener("submit", (e) => {
 
 // Envoi de la commande (array des ID) + objet contact à l'API
 function sendOrder() {
-    const firstname = document.getElementById("firstname").value;
-    const lastname = document.getElementById("lastname").value;
+    const firstname = document.getElementById("firstName").value;
+    const lastname = document.getElementById("lastName").value;
     const address = document.getElementById("address").value;
     const city = document.getElementById("city").value;
     const email = document.getElementById("email").value;
